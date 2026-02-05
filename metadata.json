@@ -1,0 +1,8 @@
+{
+  "name": "Servitec - Soluciones Tecnológicas Integrales",
+  "description": "Una plataforma web profesional para Servitec, líder en reparación de hardware y desarrollo de software a medida.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
