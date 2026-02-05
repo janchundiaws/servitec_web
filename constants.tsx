@@ -1,5 +1,6 @@
+import logoUrl from './assets/servitec-logo.png';
 
-export const LOGO_URL = "../assets/servitec-logo.png";
+export const LOGO_URL = logoUrl;
 
 export const SYSTEM_INSTRUCTION = `
 Eres el asistente virtual de Servitec, una empresa líder en servicios tecnológicos.

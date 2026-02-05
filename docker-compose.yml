@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  servitecapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+    container_name: servitecapp
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - proxy_network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.servitecapp.rule=Host(`william-as.com`) && PathPrefix(`/servitec`)"
+      - "traefik.http.routers.servitecapp.entrypoints=web"
+      - "traefik.http.services.servitecapp.loadbalancer.server.port=80"
+
+networks:
+  proxy_network:
+    external: true

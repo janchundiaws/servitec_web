@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight, Laptop, Smartphone, Settings } from 'lucide-react';
+import { LOGO_URL } from '../constants';
 
 const Hero: React.FC = () => {
   return (
@@ -51,7 +52,7 @@ const Hero: React.FC = () => {
         <div className="hidden lg:block relative">
           <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-2 rounded-3xl backdrop-blur-sm shadow-2xl">
             <img 
-              src="https://picsum.photos/seed/tech6/800/600" 
+              src={LOGO_URL}  
               alt="Tech Workspace" 
               className="rounded-2xl w-full h-auto object-cover"
             />

@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.bg-gradient-servitec {
+  background: linear-gradient(135deg, #22d3ee 0%, #1e3a8a 100%);
+}
+
+.text-servitec-cyan {
+  color: #22d3ee;
+}
+
+.bg-servitec-dark {
+  background-color: #0f172a;
+}
