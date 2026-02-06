@@ -6,7 +6,7 @@ import HardwareSection from './components/HardwareSection';
 import SoftwareSection from './components/SoftwareSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot';
+import WhatsAppButton from './components/ChatBot';
 
 const App: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const App: React.FC = () => {
         <Contact />
       </main>
       <Footer />
-      <ChatBot />
+      <WhatsAppButton />
     </div>
   );
 };

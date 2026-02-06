@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Monitor, Printer, Tv, Package, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Monitor, Printer, Tv, Package, CheckCircle2, ExternalLink, Wind, Droplets, Fan } from 'lucide-react';
 
 const hardwareServices = [
   {
@@ -17,6 +17,21 @@ const hardwareServices = [
     title: "Servicio Técnico de TV",
     desc: "Cambio de backlights, tarjetas main y reparación de pantallas para todas las marcas.",
     icon: <Tv className="w-8 h-8 text-indigo-500" />
+  },
+  {
+    title: "Reparación y mantenimiento de Aires Acondicionados",
+    desc: "Instalación, mantenimiento y reparación de sistemas de climatización. Recarga de gas y limpieza profunda.",
+    icon: <Wind className="w-8 h-8 text-sky-500" />
+  },
+  {
+    title: "Reparación y mantenimiento de Lavadoras",
+    desc: "Servicio técnico especializado para lavadoras de todas las marcas. Cambio de componentes y mantenimiento.",
+    icon: <Droplets className="w-8 h-8 text-teal-500" />
+  },
+  {
+    title: "Reparación y mantenimiento de Secadoras",
+    desc: "Mantenimiento y reparación de secadoras. Cambio de resistencias, termostatos y componentes eléctricos.",
+    icon: <Fan className="w-8 h-8 text-orange-500" />
   }
 ];
 
