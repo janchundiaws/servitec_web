@@ -14,10 +14,37 @@ services:
     networks:
       - proxy_network
     labels:
+      # - "traefik.enable=true"
+      # - "traefik.http.routers.servitecapp.rule=Host(`william-as.com`) && PathPrefix(`/servitec`)"
+      # - "traefik.http.routers.servitecapp.entrypoints=web"
+      # - "traefik.http.services.servitecapp.loadbalancer.server.port=80"
       - "traefik.enable=true"
-      - "traefik.http.routers.servitecapp.rule=Host(`william-as.com`) && PathPrefix(`/servitec`)"
-      - "traefik.http.routers.servitecapp.entrypoints=web"
-      - "traefik.http.services.servitecapp.loadbalancer.server.port=80"
+
+      # -------------------------
+      # HTTP → HTTPS
+      # -------------------------
+      - "traefik.http.routers.servitec-http.rule=Host(`william-as.com`) && PathPrefix(`/servitec`)"
+      - "traefik.http.routers.servitec-http.entrypoints=web"
+      - "traefik.http.routers.servitec-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
+      # -------------------------
+      # HTTPS
+      # -------------------------
+      - "traefik.http.routers.servitec.rule=Host(`william-as.com`) && PathPrefix(`/servitec`)"
+      - "traefik.http.routers.servitec.entrypoints=websecure"
+      - "traefik.http.routers.servitec.tls.certresolver=myresolver"
+
+      # -------------------------
+      # Strip Prefix /servitec
+      # -------------------------
+      - "traefik.http.routers.servitec.middlewares=servitec-strip"
+      - "traefik.http.middlewares.servitec-strip.stripprefix.prefixes=/servitec"
+
+      # -------------------------
+      # Servicio interno
+      # -------------------------
+      - "traefik.http.services.servitec.loadbalancer.server.port=80"
 
 networks:
   proxy_network:
