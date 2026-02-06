@@ -1,23 +1,20 @@
 pipeline{
     agent any
     stages{
-        stage 'Build'{
+        stage ('Build'){
             steps{
                 echo 'etapa Build no disponible...'
             }
         }
-        stage 'Test'{
+        stage ('Test'){
             steps{
                 echo 'etapa Test no disponible...'
             }
         }
-         stage 'Deploy'{
+         stage ('Deploy'){
             steps{
-                sh 'echo Desplegando la aplicacion...'
                 sh 'docker-compose down'
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
-                sh 'echo Aplicacion desplegada correctamente.'
+                sh 'docker-compose up -d --build'
             }
         }
     }
