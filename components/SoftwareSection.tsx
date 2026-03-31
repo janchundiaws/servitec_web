@@ -11,18 +11,18 @@ const softwareProjects = [
     desc: "Gestión avanzada de stock, proveedores y facturación electrónica."
   },
   {
-    title: "E-commerce para Retail",
+    title: "Zhanter - Firma de abogados",
     category: "Página Web",
     img: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800&auto=format&fit=crop",
-    url: "https://tienda-demo.servitec.tech",
-    desc: "Plataforma de ventas con carrito de compras y pasarela de pagos."
+    url: "https://zhanter.gintrich.cloud/",
+    desc: "Pagina web corporativa con portafolio de servicios, blog y contacto integrado."
   },
   {
-    title: "App Delivery Ciudad",
+    title: "App Finanzas Personales",
     category: "Mobile App",
-    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
-    url: "https://play.google.com/store/apps/details?id=servitec.delivery",
-    desc: "Aplicación para Android/iOS con rastreo en tiempo real mediante GPS."
+    img: "https://william-as.com/finanzasapp/assets/screen-2.png",
+    url: "https://william-as.com/finanzasapp",
+    desc: "Aplicación para Android/iOS que ayuda a gestionar gastos e ingresos personales."
   },
   {
     title: "Gestor de Clínicas",
@@ -74,7 +74,7 @@ const SoftwareSection: React.FC = () => {
                     className="flex-1 flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition-all active:scale-95 shadow-lg shadow-cyan-500/10"
                   >
                     <Play size={16} fill="currentColor" />
-                    Probar Demo
+                    Visitar Demo
                   </a>
                   <button className="p-3 bg-white/5 hover:bg-white/10 text-white rounded-xl transition-all border border-white/10">
                     <ExternalLink size={18} />
